@@ -8,5 +8,7 @@ namespace AddressBook.Interfaces
         string Address { get; set; }
 
         void DisplayContactDetails();
+
+        void EditContactInfo();
     }
 }

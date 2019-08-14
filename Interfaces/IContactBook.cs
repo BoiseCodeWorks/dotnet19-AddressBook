@@ -9,7 +9,7 @@ namespace AddressBook.Interfaces
 
         void CreateContact();
         
-        void ListContacts();
+        void ListContacts(string group);
 
         IContact GetContactByName();
 

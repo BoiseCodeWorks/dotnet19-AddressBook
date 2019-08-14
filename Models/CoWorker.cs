@@ -15,6 +15,12 @@ namespace AddressBook.Models
         {
             
         }
+
+        public void EditContactInfo()
+        {
+            
+        }
+
         public CoWorker(string first, string last, string address, string business, string position)
         {
             FirstName = first;
