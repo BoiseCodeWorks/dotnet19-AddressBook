@@ -55,7 +55,7 @@ namespace AddressBook.Models
     public void EditContactInfo()
     {
       IContact contact = (IContact)this;
-
+      //TODO think on this for a bit
     }
   }
 }
