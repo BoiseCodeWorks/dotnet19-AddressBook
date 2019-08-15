@@ -30,16 +30,20 @@ namespace AddressBook.Models
     public void ListContacts(string group = "")
     {
       List<IContact> contactList = Contacts;
+      if (group == "4") return;
       switch (group)
       {
-        case "COWORKERS":
+        case "1":
           // logic
+          contactList = Contacts.FindAll(c => c is CoWorker);
           break;
-        case "FRIENDS":
+        case "2":
           // logic
+          contactList = Contacts.FindAll(c => c is Friend);
           break;
-        case "FAMILYMEMBERS":
+        case "3":
           // logic
+          contactList = Contacts.FindAll(c => c is FamilyMember);
           break;
         case "":
           //NOTE do nothing
@@ -57,6 +61,20 @@ namespace AddressBook.Models
           //NOTE below is syntax to cast from data type IContact to data type CoWorker
           CoWorker c = (CoWorker)contact;
           System.Console.WriteLine(c.FullName + " " + c.Business);
+        }
+
+        if (contact is FamilyMember)
+        {
+          //NOTE below is syntax to cast from data type IContact to data type CoWorker
+          FamilyMember c = (FamilyMember)contact;
+          System.Console.WriteLine(c.Relation + ": " + c.FullName);
+        }
+
+        if (contact is Friend)
+        {
+          //NOTE below is syntax to cast from data type IContact to data type CoWorker
+          Friend c = (Friend)contact;
+          System.Console.WriteLine(c.NickName + ": " + c.FullName);
         }
       }
     }
