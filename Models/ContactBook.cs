@@ -60,5 +60,10 @@ namespace AddressBook.Models
         }
       }
     }
+    public ContactBook(string ownersName)
+    {
+      OwnersName = ownersName;
+      Contacts = new List<IContact>();
+    }
   }
 }

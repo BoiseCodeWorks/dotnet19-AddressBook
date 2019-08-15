@@ -55,15 +55,27 @@ namespace AddressBook
 
     public void Run()
     {
-
+      while (UsingContactBook)
+      {
+        DisplayMenu();
+      }
     }
 
     public void Setup()
     {
+      UsingContactBook = true;
 
+      ContactBook = new ContactBook("CodeWorks");
+
+      Friend friend1 = new Friend("Tom", "Jones", "Boise", "Tommy");
+      FamilyMember familyMember1 = new FamilyMember("Peter", "Parker", "Queens", "Spidey");
+      CoWorker coWorker1 = new CoWorker("Charles", "Xavier", "Manhattan", "School of Gifted Students", "Professor");
+
+      ContactBook.Contacts.Add(friend1);
+      ContactBook.Contacts.Add(familyMember1);
+      ContactBook.Contacts.Add(coWorker1);
     }
   }
-
 }
 
 

@@ -10,6 +10,9 @@ namespace AddressBook
       //CoWorker.ExampleStaticMethod(); NOTE This is how to invoke a static method. Don't instantiate the class before drilling into the class data type
 
       Console.Clear();
+      App app = new App();
+      app.Setup();
+      app.Run();
       // TODO 1. Instatiate an App
       //  2. Finish creating models (ensure they implement the appropriate interface)
       //  2. Create dummy data
