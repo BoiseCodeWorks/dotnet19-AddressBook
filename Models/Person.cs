@@ -30,11 +30,31 @@ namespace AddressBook.Models
         Friend friend = (Friend)contact;
         Console.WriteLine(friend.NickName);
       }
-
+      PersonMenu();
     }
-
+    private void PersonMenu()
+    {
+      System.Console.WriteLine("-----------------------------------------------------------");
+      System.Console.WriteLine("(E)dit contact");
+      System.Console.WriteLine("(R)emove contact");
+      System.Console.WriteLine("any other key to go back");
+      switch (Console.ReadLine().ToUpper())
+      {
+        case "E":
+        case "EDIT":
+          EditContactInfo();
+          break;
+        case "R":
+        case "REMOVE":
+          //remove logic
+          break;
+        default:
+          break;
+      }
+    }
     public void EditContactInfo()
     {
+      IContact contact = (IContact)this;
 
     }
   }
