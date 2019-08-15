@@ -82,7 +82,7 @@ namespace AddressBook.Models
               System.Console.Write(ltr);
               Thread.Sleep(200);
             }
-            Console.WriteLine();
+            Console.WriteLine("Saved!");
             break;
           default:
             System.Console.WriteLine("Please enter a valid option.");

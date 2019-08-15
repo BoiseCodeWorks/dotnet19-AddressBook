@@ -71,6 +71,8 @@ namespace AddressBook
       FamilyMember familyMember1 = new FamilyMember("Peter", "Parker", "Queens", "Spidey");
       CoWorker coWorker1 = new CoWorker("Charles", "Xavier", "Manhattan", "School of Gifted Students", "Professor");
 
+      friend1.DisplayContactDetails();
+
       ContactBook.Contacts.Add(friend1);
       ContactBook.Contacts.Add(familyMember1);
       ContactBook.Contacts.Add(coWorker1);

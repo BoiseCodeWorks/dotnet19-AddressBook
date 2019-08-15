@@ -97,14 +97,12 @@ namespace AddressBook.Models
 
         if (contact is FamilyMember)
         {
-          //NOTE below is syntax to cast from data type IContact to data type CoWorker
           FamilyMember c = (FamilyMember)contact;
           System.Console.WriteLine(c.Relation + ": " + c.FullName);
         }
 
         if (contact is Friend)
         {
-          //NOTE below is syntax to cast from data type IContact to data type CoWorker
           Friend c = (Friend)contact;
           System.Console.WriteLine(c.NickName + ": " + c.FullName);
         }
