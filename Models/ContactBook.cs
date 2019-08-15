@@ -13,7 +13,39 @@ namespace AddressBook.Models
 
     public void CreateContact()
     {
-
+      System.Console.WriteLine("Enter First Name:");
+      string userFirst = Console.ReadLine();
+      System.Console.WriteLine("Enter Last Name:");
+      string userLast = Console.ReadLine();
+      System.Console.WriteLine("Enter Address:");
+      string userAddress = Console.ReadLine();
+      System.Console.WriteLine("Type of contact\n1. CoWorker\n2. Family Member\n3. Friend");
+      switch (Console.ReadLine())
+      {
+        case "1":
+          System.Console.WriteLine("Enter Business: ");
+          string userBusiness = Console.ReadLine();
+          System.Console.WriteLine(("Enter Position: "));
+          string userPosition = Console.ReadLine();
+          CoWorker c = new CoWorker(userFirst, userLast, userAddress, userBusiness, userPosition);
+          Contacts.Add(c);
+          break;
+        case "2":
+          System.Console.WriteLine("Enter Relation: ");
+          string userRelation = Console.ReadLine();
+          FamilyMember fm = new FamilyMember(userFirst, userLast, userAddress, userRelation);
+          Contacts.Add(fm);
+          break;
+        case "3":
+          System.Console.WriteLine("Enter NickName: ");
+          string userNickName = Console.ReadLine();
+          Friend f = new Friend(userFirst, userLast, userAddress, userNickName);
+          Contacts.Add(f);
+          break;
+        default:
+          System.Console.WriteLine("Not a valid option");
+          break;
+      }
     }
 
     public void DeleteContact()
