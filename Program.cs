@@ -1,18 +1,21 @@
 ﻿using System;
+using AddressBook.Models;
 
 namespace AddressBook
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.Clear();
-            // TODO 1. Instatiate an App
-                //  2. Finish creating models (ensure they implement the appropriate interface)
-                //  2. Create dummy data
-                //  3. Run the menu navigation within a while loop (build the app)
-        }
+      //CoWorker.ExampleStaticMethod(); NOTE This is how to invoke a static method. Don't instantiate the class before drilling into the class data type
+
+      Console.Clear();
+      // TODO 1. Instatiate an App
+      //  2. Finish creating models (ensure they implement the appropriate interface)
+      //  2. Create dummy data
+      //  3. Run the menu navigation within a while loop (build the application)
     }
+  }
 }
 
 /** NOTE Possible application layout
