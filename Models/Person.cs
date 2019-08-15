@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 using AddressBook.Interfaces;
 
 namespace AddressBook.Models
@@ -54,8 +55,40 @@ namespace AddressBook.Models
     }
     public void EditContactInfo()
     {
-      IContact contact = (IContact)this;
-      //TODO think on this for a bit
+      IContact c = (IContact)this;
+      System.Console.WriteLine($"Edit the info for {c.FullName}:");
+      bool editing = true;
+      while (editing)
+      {
+        System.Console.WriteLine("1. First Name\n2. Last Name\n3. Address\n4. Finish editing and return.");
+        switch (Console.ReadLine())
+        {
+          case "1":
+            System.Console.Write("New First Name: ");
+            c.FirstName = Console.ReadLine();
+            break;
+          case "2":
+            System.Console.Write("New Last Name: ");
+            c.LastName = Console.ReadLine();
+            break;
+          case "3":
+            System.Console.Write("New Address: ");
+            c.Address = Console.ReadLine();
+            break;
+          case "4":
+            editing = false;
+            foreach (var ltr in "Saving...")
+            {
+              System.Console.Write(ltr);
+              Thread.Sleep(200);
+            }
+            Console.WriteLine();
+            break;
+          default:
+            System.Console.WriteLine("Please enter a valid option.");
+            break;
+        }
+      }
     }
   }
 }
