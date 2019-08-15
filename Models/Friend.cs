@@ -3,7 +3,7 @@ using AddressBook.Interfaces;
 
 namespace AddressBook.Models
 {
-  public class Friend : IContact
+  public class Friend : Person, IContact
   {
     public string FirstName { get; set; }
     public string LastName { get; set; }
@@ -13,15 +13,6 @@ namespace AddressBook.Models
     public string NickName { get; set; }
 
 
-    public void DisplayContactDetails()
-    {
-      throw new NotImplementedException();
-    }
-
-    public void EditContactInfo()
-    {
-      throw new NotImplementedException();
-    }
     public Friend(string firstName, string lastName, string address, string nickName = "")
     {
       FirstName = firstName;

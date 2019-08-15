@@ -2,7 +2,7 @@ using AddressBook.Interfaces;
 
 namespace AddressBook.Models
 {
-  public class CoWorker : IContact
+  public class CoWorker : Person, IContact
   {
     public string FirstName { get; set; }
     public string LastName { get; set; }
@@ -10,16 +10,6 @@ namespace AddressBook.Models
     public string Address { get; set; }
     public string Business { get; set; }
     public string Position { get; set; }
-
-    public void DisplayContactDetails()
-    {
-
-    }
-
-    public void EditContactInfo()
-    {
-
-    }
 
     public CoWorker(string first, string last, string address, string business, string position)
     {

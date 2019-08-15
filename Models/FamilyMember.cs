@@ -3,7 +3,7 @@ using System;
 
 namespace AddressBook.Models
 {
-  public class FamilyMember : IContact
+  public class FamilyMember : Person, IContact
   {
     public string FirstName { get; set; }
     public string LastName { get; set; }
@@ -11,15 +11,6 @@ namespace AddressBook.Models
     public string Address { get; set; }
     public string Relation { get; set; }
 
-    public void DisplayContactDetails()
-    {
-
-    }
-
-    public void EditContactInfo()
-    {
-
-    }
     public FamilyMember(string firstname, string lastname, string address, string relation)
     {
       FirstName = firstname;
